@@ -29,6 +29,7 @@ arch = "arm64-v8a"
 
 [TikTok]
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
+included-patches = "'SIM spoof'"
 arch = "arm64-v8a"
 
 [Reddit]
