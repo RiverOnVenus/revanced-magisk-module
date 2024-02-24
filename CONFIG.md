@@ -29,7 +29,6 @@ patches-version = "v2.160.0" # 'latest', 'dev', or a version number. default: "l
 [Some-App]
 app-name = "SomeApp" # if set, release name becomes SomeApp instead of Some-App. default is same as table name, which is 'Some-App' here.
 enabled = true # whether to build the app. default: true
-version = "auto" # 'auto', 'latest', 'beta' or a version number (e.g. '17.40.41'). default: auto
 # 'auto' option gets the latest possible version supported by all the included patches
 # 'latest' gets the latest stable without checking patches support. 'beta' gets the latest beta/alpha
 include-stock = true # includes stock apk in the module. default: true
