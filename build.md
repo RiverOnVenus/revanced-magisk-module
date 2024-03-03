@@ -1,8 +1,8 @@
-YouTube: 19.04.37  
-Music: 6.41.58  
-Twitch: 16.9.1  
 TikTok: 32.5.3  
+Music: 6.41.58  
 Twitter: 10.30.0-release.0  
+Twitch: 16.9.1  
+YouTube: 19.04.37  
 Reddit: 2024.08.0  
 
 Install [Vanced Microg](https://github.com/TeamVanced/VancedMicroG/releases) for non-root YouTube and YT Music  
