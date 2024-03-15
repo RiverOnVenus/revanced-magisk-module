@@ -59,7 +59,9 @@ rv-brand = "ReVanced Extended"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
 
 [Instagram]
+version = "latest"
 apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram/"
+arch = "arm64-v8a"
 
 [Messenger]
 enabled = false
