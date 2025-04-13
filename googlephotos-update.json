@@ -1,6 +1,6 @@
 {
-  "version": "v7.24.0.746524260 (patches: 5.19.0)",
-  "versionCode": 70,
-  "zipUrl": "https://github.com/RiverOnVenus/revanced-magisk-module/releases/download/70/googlephotos-revanced-magisk-v7.24.0.746524260-arm64-v8a.zip",
+  "version": "v7.24.0.746524260 (patches: 5.19.1)",
+  "versionCode": 71,
+  "zipUrl": "https://github.com/RiverOnVenus/revanced-magisk-module/releases/download/71/googlephotos-revanced-magisk-v7.24.0.746524260-arm64-v8a.zip",
   "changelog": "https://raw.githubusercontent.com/RiverOnVenus/revanced-magisk-module/update/build.md"
 }
