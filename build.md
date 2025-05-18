@@ -1,6 +1,5 @@
-GooglePhotos: 7.28.0.754713439  
+GooglePhotos: 7.29.0.757514586  
 Music: 8.05.51  
-Spotify: 9.0.36.683  
 YouTube: 20.12.46  
 
 Install [Microg](https://github.com/ReVanced/GmsCore/releases) for non-root YouTube and YT Music APKs  
