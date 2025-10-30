@@ -94,11 +94,17 @@ install() {
 			break
 		fi
 		if ! op=$(pmex install-commit "$SES"); then
-			if echo "$op" | grep -q INSTALL_FAILED_VERSION_DOWNGRADE; then
-				ui_print "* Handling INSTALL_FAILED_VERSION_DOWNGRADE.."
+			if echo "$op" | grep -q -e INSTALL_FAILED_VERSION_DOWNGRADE -e INSTALL_FAILED_UPDATE_INCOMPATIBLE; then
+				ui_print "* Handling install error"
 				if [ "$IS_SYS" = true ]; then
-					mkdir -p /data/adb/rvhc/empty /data/adb/post-fs-data.d
 					SCNM="/data/adb/post-fs-data.d/$PKG_NAME-uninstall.sh"
+					if [ -f "$SCNM" ]; then
+						ui_print "* Remove the old module. Reboot and reflash!"
+						ui_print ""
+						install_err=" "
+						break
+					fi
+					mkdir -p /data/adb/rvhc/empty /data/adb/post-fs-data.d
 					echo "mount -o bind /data/adb/rvhc/empty $BASEPATH" >"$SCNM"
 					chmod +x "$SCNM"
 					ui_print "* Created the uninstall script."
@@ -170,23 +176,12 @@ if [ "$KSU" ]; then
 		UID=${UID#*=} UID=${UID%% *}
 	fi
 	if [ "$UID" ]; then
-		OP=$("${MODPATH:?}/bin/$ARCH/ksu_profile" "$UID" 2>&1)
-		R=$?
-		if [ $R = 0 ]; then
-			ui_print ""
-			ui_print "* You are using KernelSU."
-			ui_print "  In order for the module to work, you"
-			ui_print "  may need to untick 'Unmount modules'"
-			ui_print "  in KernelSU app for $PKG_NAME"
-			ui_print "  Do not ignore this message and proceed "
-			ui_print "  to create an issue on the GitHub page!"
-			ui_print ""
-		elif [ $R = 1 ]; then
-			:
-		else ui_print "ERROR ksu_profile: $OP"; fi
+		if ! OP=$("${MODPATH:?}/bin/$ARCH/ksu_profile" "$UID" "$PKG_NAME" 2>&1); then
+			ui_print "ERROR ksu_profile: $OP"
+		fi
 	else
 		ui_print "no UID"
-		echo >&2 "$(dumpsys package "$PKG_NAME")"
+		dumpsys package "$PKG_NAME" >&2
 	fi
 fi
 
