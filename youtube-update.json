@@ -1,6 +1,6 @@
 {
-  "version": "v20.14.43 (patches 5.44.0)",
-  "versionCode": 103,
-  "zipUrl": "https://github.com/RiverOnVenus/revanced-magisk-module/releases/download/103/youtube-revanced-magisk-v20.14.43-all.zip",
+  "version": "v20.14.43 (patches 5.45.0)",
+  "versionCode": 104,
+  "zipUrl": "https://github.com/RiverOnVenus/revanced-magisk-module/releases/download/104/youtube-revanced-magisk-v20.14.43-all.zip",
   "changelog": "https://raw.githubusercontent.com/RiverOnVenus/revanced-magisk-module/update/build.md"
 }
