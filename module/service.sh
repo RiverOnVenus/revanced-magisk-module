@@ -25,10 +25,10 @@ run() {
 
 	BASEPATH=${BASEPATH##*:} BASEPATH=${BASEPATH%/*}
 	if [ ! -d "$BASEPATH/lib" ]; then
-		err "mount failed (ROM issue)"
+		err "mount failed (ROM issue). Dont report this, consider using rvmm-zygisk-mount."
 		return
 	fi
-	VERSION=$(dumpsys package "$PKG_NAME" | grep -m1 versionName) VERSION="${VERSION#*=}"
+	VERSION=$(dumpsys package "$PKG_NAME" 2>&1 | grep -m1 versionName) VERSION="${VERSION#*=}"
 	if [ "$VERSION" != "$PKG_VER" ] && [ "$VERSION" ]; then
 		err "version mismatch (installed:${VERSION}, module:$PKG_VER)"
 		return
