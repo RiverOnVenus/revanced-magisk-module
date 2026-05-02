@@ -1,6 +1,6 @@
 {
-  "version": "v8.47.56 (patches 1.24.0.mpp)",
-  "versionCode": 110,
-  "zipUrl": "https://github.com/RiverOnVenus/revanced-magisk-module/releases/download/110/music-morphe-module-v8.47.56-arm-v7a.zip",
+  "version": "v8.47.56 (patches 1.25.0.mpp)",
+  "versionCode": 111,
+  "zipUrl": "https://github.com/RiverOnVenus/revanced-magisk-module/releases/download/111/music-morphe-module-v8.47.56-arm-v7a.zip",
   "changelog": "https://raw.githubusercontent.com/RiverOnVenus/revanced-magisk-module/update/build.md"
 }
